@@ -1,0 +1,72 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Sample API",
+      "description": "This is a sample API to demonstrate Spectral linting.",
+      "version": "1.0.0"
+    },
+    "host": "api.sample.com",
+    "basePath": "/v1",
+    "schemes": [
+      "https"
+    ],
+    "paths": {
+      "/users": {
+        "get": {
+          "summary": "Get a list of users",
+          "description": "Retrieves a list of users.",
+          "responses": {
+            "200": {
+              "description": "A list of users",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/user": {
+        "post": {
+          "summary": "Create a user",
+          "description": "",
+          "parameters": [
+            {
+              "in": "body",
+              "name": "user",
+              "description": "User to add to the database",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  }
+                },
+                "required": ["name"]
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "User created"
+            }
+          }
+        }
+      }
+    }
+  }
+  
