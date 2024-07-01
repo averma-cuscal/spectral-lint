@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@latest
 
       # Run Stoplight Spectral Wrapper
-      - uses: stoplightio/spectral-action@latest
+      - uses: stoplightio/spectral-action@main
         with:
           file_glob: 'Partner_APIs/*.json'
           spectral_ruleset: .spectral.json
