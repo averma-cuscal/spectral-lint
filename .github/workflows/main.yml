@@ -20,10 +20,10 @@ jobs:
     
     steps:
       # Check out the repository
-      - uses: actions/checkout@latest
+      - uses: actions/checkout@v4
 
       # Run Stoplight Spectral Wrapper
-      - uses: stoplightio/spectral-action@main
+      - uses: stoplightio/spectral-action@latest
         with:
           file_glob: 'Partner_APIs/*.json'
           spectral_ruleset: .spectral.json
