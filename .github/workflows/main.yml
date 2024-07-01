@@ -16,7 +16,7 @@ jobs:
     
     # Set permissions for the job
     permissions:
-      checks: read
+      checks: write
     
     steps:
       # Check out the repository
