@@ -1,0 +1,19 @@
+{
+  "formats": [],
+  "extends": [
+    "spectral:oas"
+  ],
+  "rules": {
+    "no-hoff": {
+      "description": "This is an example rule",
+      "message": "APIs defined by The Hoff are non allowed",
+      "given": "$.info.contact.name",
+      "then": {
+        "function": "pattern",
+        "functionOptions": {
+          "notMatch": "/^Mark Hesse$/"
+           }
+        }
+      }
+    }
+}
